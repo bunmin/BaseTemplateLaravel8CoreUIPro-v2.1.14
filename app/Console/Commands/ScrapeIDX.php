@@ -42,9 +42,21 @@ class ScrapeIDX extends Command
      */
     public function handle()
     {
+        $backDays = 1; //get data until 20 days to back
+        for ($i=$backDays; $i >= 1 ; $i--) {
+            echo($i."\n");
+            $this->doScarp($i);
+        }
+
+        echo "====Import Done====";
+        return;
+    }
+
+    public function doScarp(int $backDaysNumber = 1)
+    {
         $idxStockSummaryRepo = new ImportIdxStockSummaryRepo();
 
-        $date_scrap = date("Ymd", strtotime("-1 days"));
+        $date_scrap = date("Ymd", strtotime("-$backDaysNumber days"));
         $recordsTotal = 1;
         $url = "https://www.idx.co.id/umbraco/Surface/TradingSummary/GetStockSummary?date=$date_scrap&length=$recordsTotal";
         $response = Http::get($url);
@@ -93,8 +105,5 @@ class ScrapeIDX extends Command
 
             $idxStockSummaryRepo->saveScrap($data);
         }
-
-        echo "====Import Done====";
-        return;
     }
 }
