@@ -26,3 +26,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+try {
+    window.$ = window.jQuery = require('jquery')
+    require('bootstrap')
+    require('@coreui/coreui-pro')
+    require('popper.js')
+    require('pace-progress/pace.min.js')
+    require('perfect-scrollbar')
+    require('chart.js')
+    require('@coreui/coreui-plugin-chartjs-custom-tooltips')
+} catch (e) {console.log(e)}
