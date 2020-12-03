@@ -34,6 +34,4 @@ try {
     require('popper.js')
     require('pace-progress/pace.min.js')
     require('perfect-scrollbar')
-    require('chart.js')
-    require('@coreui/coreui-plugin-chartjs-custom-tooltips')
 } catch (e) {console.log(e)}
