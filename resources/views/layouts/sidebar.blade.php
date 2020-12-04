@@ -1,3 +1,4 @@
+
 <div class="sidebar">
     <nav class="sidebar-nav">
       <ul class="nav">
@@ -7,6 +8,8 @@
             <span class="badge badge-info">NEW</span>
           </a>
         </li>
+
+        @role('super admin')
         <li class="nav-title">Theme</li>
         <li class="nav-item">
           <a class="nav-link" href="colors.html">
@@ -392,7 +395,9 @@
           </div>
           <small class="text-muted">243GB/256GB</small>
         </li>
+        @endrole
       </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>
+
