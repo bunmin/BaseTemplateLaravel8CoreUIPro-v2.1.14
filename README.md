@@ -7,3 +7,12 @@
 7. register new user
 8. login
 9. done.
+
+##login : 
+-super admin
+user : admin@admin.com
+password : 12346578
+
+-admin
+user : feri.suryanata@gmail.com
+password : 12346578
