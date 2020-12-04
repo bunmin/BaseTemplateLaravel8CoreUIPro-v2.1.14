@@ -9,10 +9,10 @@
 9. done.
 
 ##login : 
--super admin
-user : admin@admin.com
-password : 12346578
+<br>- super admin :
+<br>user : admin@admin.com
+<br>password : 12346578
 
--admin
-user : feri.suryanata@gmail.com
-password : 12346578
+-admin :
+<br>user : feri.suryanata@gmail.com
+<br>password : 12346578
